@@ -8,7 +8,7 @@
   font-family: 'DancingScript';
   font-size: 2em;
   margin: 0px;
-  padding-left: 4em;
+  padding-left: 3em;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
 }
@@ -72,8 +72,6 @@
 
 @media only screen and (max-width: 320px) {
   .header-title {
-    font-family: 'Times New Roman', Times, serif;
-    color: navy;
     font-size: 1.5em;
     font-weight: lighter;
   }
