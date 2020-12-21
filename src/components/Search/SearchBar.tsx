@@ -35,7 +35,9 @@ function SearchBar() {
           placeholder="Type a name..."
         ></input>
         <div className="results-amount">
-          {people && searchTerm ? `${people.length} results found for ${searchTerm}` : ''}
+          {searchResults?.length !== people?.length && searchTerm
+            ? `${searchResults?.length} results found for ${searchTerm}`
+            : 'Please enter a name to search for'}
         </div>
       </div>
       <div className="results-container">
