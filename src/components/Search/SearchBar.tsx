@@ -43,7 +43,7 @@ function SearchBar() {
           ? searchResults.map((i: Individual, index: number) => {
               return <Person person={i} key={index} />;
             })
-          : people?.map((i, index) => {
+          : people?.map((i: Individual, index: number) => {
               return <Person person={i} key={index} />;
             })}
       </div>
