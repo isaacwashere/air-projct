@@ -6,6 +6,7 @@
   border-style: none;
   padding: 0.1em;
   font-size: medium;
+  padding-left: 20px;
 }
 
 ::placeholder {
