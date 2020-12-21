@@ -7,17 +7,18 @@ import './SearchBar.css';
 function SearchBar() {
   const [people, setPeople] = useState<Individual[]>();
   const [searchTerm, setSearchTerm] = useState<string>('');
+  const [searchResults, setSearchResults] = useState<Individual[]>();
 
   const updateList = (e: ChangeEvent<HTMLInputElement>) => {
     if (!people) return;
 
     const text = e.target.value.toLowerCase().trim();
-    const newPeople = data.filter((person: Individual) => {
+    const newPeople = people.filter((person: Individual) => {
       return person.name.toLowerCase().includes(text);
     });
 
     setSearchTerm(text);
-    if (newPeople.length >= 1) setPeople(newPeople);
+    newPeople.length >= 1 ? setSearchResults(newPeople) : setSearchResults(people);
   };
 
   useEffect(() => {
@@ -38,10 +39,13 @@ function SearchBar() {
         </div>
       </div>
       <div className="results-container">
-        {people &&
-          people.map((i: Individual, index: number) => {
-            return <Person person={i} key={index} />;
-          })}
+        {searchResults
+          ? searchResults.map((i: Individual, index: number) => {
+              return <Person person={i} key={index} />;
+            })
+          : people?.map((i: Individual, index: number) => {
+              return <Person person={i} key={index} />;
+            })}
       </div>
     </div>
   );
