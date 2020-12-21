@@ -27,6 +27,14 @@ input:focus {
   margin-top: 1.5em;
 }
 
+@media only screen and (max-width: 590px) {
+  .input {
+    padding-left: 15px;
+    font-size: medium;
+    padding-left: 1em;
+  }
+}
+
 @media only screen and (max-width: 320px) {
   .input {
     padding-left: 15px;
