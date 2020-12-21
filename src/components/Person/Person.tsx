@@ -3,12 +3,14 @@ import { PersonProps } from '../../interfaces';
 import './Person.css';
 
 function Person({ person }: PersonProps) {
+  const altify = (name: string): string => {
+    return name.split(' ').join('-').toLowerCase();
+  };
+
   return (
-    <div className="person-container">
-      <div className="image-container">
-        <img className="image" src={person.avatar} />
-      </div>
-      <div className="name-desc-container">
+    <div className="name-desc-container">
+      <img className="image" src={person.avatar} alt={`${altify(person.name)}-profile-pic`} />
+      <div className="content-container">
         <p className="person-name">{person.name}</p>
         <p className="person-desc">{person.description}</p>
       </div>

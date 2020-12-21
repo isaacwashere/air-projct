@@ -1,13 +1,16 @@
 .outer-bar {
   border-top: 3px solid turquoise;
+  border-bottom: 1px solid #efefef;
 }
 
 .outer-bar-text {
   color: blue;
   font-family: 'DancingScript';
-  font-size: 3em;
+  font-size: 2em;
   margin: 0px;
   padding-left: 4em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
 }
 
 .content {
@@ -18,10 +21,17 @@
 .header-title {
   font-family: 'Times New Roman', Times, serif;
   color: navy;
+  font-size: 2.5em;
+  font-weight: lighter;
 }
 
 .header-text {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-container {
+  margin-top: 5em;
+  margin-bottom: 2.5em;
 }
 
 @font-face {

@@ -1,20 +1,13 @@
-.person-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.image-container {
-  height: 100px;
-  width: 100px;
-}
-
 .image {
   height: 70px;
   width: 70px;
+  padding-right: 2em;
 }
 
 .name-desc-container {
   margin: auto;
+  width: 100%;
+  display: flex;
 }
 
 .person-name {
