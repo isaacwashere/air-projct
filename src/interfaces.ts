@@ -9,3 +9,7 @@ export interface Individual {
 export interface PersonProps {
   person: Individual;
 }
+
+export interface SearchResultsProps {
+  results: Individual[];
+}

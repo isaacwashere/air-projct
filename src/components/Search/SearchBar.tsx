@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
+import SearchResults from './SearchResults/SearchResults';
 import { Individual } from '../../interfaces';
-import Person from '../Person/Person';
 import { data } from '../../data';
 import './SearchBar.css';
 
@@ -41,13 +41,7 @@ function SearchBar() {
         </div>
       </div>
       <div className="results-container">
-        {searchResults
-          ? searchResults.map((i: Individual, index: number) => {
-              return <Person person={i} key={index} />;
-            })
-          : people?.map((i: Individual, index: number) => {
-              return <Person person={i} key={index} />;
-            })}
+        <SearchResults results={searchResults ? searchResults : (people as Individual[])} />
       </div>
     </div>
   );
