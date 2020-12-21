@@ -65,7 +65,7 @@
 
   .outer-bar-text {
     margin: 0px;
-    padding-left: 1em;
+    padding-left: 0px;
     text-align: center;
   }
 }
