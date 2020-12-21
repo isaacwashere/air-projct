@@ -1,0 +1,29 @@
+.person-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.image-container {
+  height: 100px;
+  width: 100px;
+}
+
+.image {
+  height: 70px;
+  width: 70px;
+}
+
+.name-desc-container {
+  margin: auto;
+}
+
+.person-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.person-desc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  color: grey;
+}

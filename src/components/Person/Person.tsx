@@ -4,10 +4,14 @@ import './Person.css';
 
 function Person({ person }: PersonProps) {
   return (
-    <div className="App">
-      <img src={person.avatar} />
-      <p>{person.name}</p>
-      <p>{person.description}</p>
+    <div className="person-container">
+      <div className="image-container">
+        <img className="image" src={person.avatar} />
+      </div>
+      <div className="name-desc-container">
+        <p className="person-name">{person.name}</p>
+        <p className="person-desc">{person.description}</p>
+      </div>
     </div>
   );
 }

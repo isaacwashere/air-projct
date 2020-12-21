@@ -2,6 +2,7 @@ import React, { ChangeEvent, useEffect, useState } from 'react';
 import { Individual } from '../../interfaces';
 import Person from '../Person/Person';
 import { data } from '../../data';
+import './SearchBar.css';
 
 function SearchBar() {
   const [people, setPeople] = useState<Individual[]>();
@@ -23,12 +24,16 @@ function SearchBar() {
   }, []);
 
   return (
-    <div className="App">
-      <input className="input" onChange={updateList}></input>
-      {people &&
-        people.map((i: Individual, index: number) => {
-          return <Person person={i} key={index} />;
-        })}
+    <div className="search-bar">
+      <div className="search-input-container">
+        <input className="input" onChange={updateList} placeholder="Type a name..."></input>
+      </div>
+      <div className="results-container">
+        {people &&
+          people.map((i: Individual, index: number) => {
+            return <Person person={i} key={index} />;
+          })}
+      </div>
     </div>
   );
 }
