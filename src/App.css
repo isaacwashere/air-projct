@@ -38,3 +38,16 @@
   font-family: 'DancingScript';
   src: url('./fonts/DancingScript-Regular.ttf');
 }
+
+@media only screen and (max-width: 320px) {
+  .header-title {
+    font-family: 'Times New Roman', Times, serif;
+    color: navy;
+    font-size: 1.5em;
+    font-weight: lighter;
+  }
+
+  .content {
+    text-align: left;
+  }
+}

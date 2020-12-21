@@ -1,4 +1,6 @@
-export const data = [
+import { Individual } from './interfaces';
+
+export const data: Individual[] = [
   {
     id: 1,
     name: 'Dyanna Cullingford',

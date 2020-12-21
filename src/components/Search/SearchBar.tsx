@@ -6,17 +6,18 @@ import './SearchBar.css';
 
 function SearchBar() {
   const [people, setPeople] = useState<Individual[]>();
+  const [searchTerm, setSearchTerm] = useState<string>('');
 
   const updateList = (e: ChangeEvent<HTMLInputElement>) => {
     if (!people) return;
 
-    const text = e.target.value.toLowerCase();
-    const newPeople = people.filter((person: Individual) => {
+    const text = e.target.value.toLowerCase().trim();
+    const newPeople = data.filter((person: Individual) => {
       return person.name.toLowerCase().includes(text);
     });
 
+    setSearchTerm(text);
     if (newPeople.length >= 1) setPeople(newPeople);
-    if (!text) setPeople(data);
   };
 
   useEffect(() => {
@@ -26,7 +27,15 @@ function SearchBar() {
   return (
     <div className="search-bar">
       <div className="search-input-container">
-        <input className="input" onChange={updateList} placeholder="Type a name..."></input>
+        <input
+          autoFocus
+          className="input"
+          onChange={updateList}
+          placeholder="Type a name..."
+        ></input>
+        <div className="results-amount">
+          {people && searchTerm ? `${people.length} results found for ${searchTerm}` : ''}
+        </div>
       </div>
       <div className="results-container">
         {people &&
